@@ -1,0 +1,39 @@
+<p>view works!</p>
+<div>h</div>
+
+<!-- Search Input + Button -->
+<div style="margin: 20px;" class="d-flex justify-content-center">
+  <input
+  class="form-control"
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Search by Toppings"
+    style="width: 300px; height: 40px; margin-right: 10px;"
+  >
+  <button (click)="searchPizza()" style="height: 40px;">Search</button>
+</div>
+
+<!-- Pizza Cards -->
+<div class="row" style="margin-left: 20px;">
+  <div class="col-md-4" *ngFor="let i of filteredPizzas">
+    <div><img src="{{i.image}}" style="height: 250px; width:250px; margin-top: 40px;"></div>
+    <div><b>Id :</b> {{i.id}}</div>
+    <div><b>Toppings :</b> {{i.toppings}}</div>
+    <div><b>Sauce :</b> {{i.sauce}}</div>
+    <div><b>Size :</b> {{i.size}}</div>
+    <div><b>Features :</b> {{i.Features}}</div>
+    <div><b>Price :</b> {{i.price}}</div>
+    <button
+      routerLink="/order"
+      [queryParams]="{a:i.id, b:i.toppings, c:i.sauce, d:i.size, e:i.Features, f:i.price, g:i.image}"
+      class="btn btn-danger form-control mb-2 me-2"
+      style="width: 200px;"
+    >Order Now</button>
+    <button
+      (click)="getitem(i)"
+      routerLink="/addtocart"
+      class="btn btn-danger form-control mb-2"
+      style="width: 200px;"
+    >Add to Cart</button>
+  </div>
+</div>

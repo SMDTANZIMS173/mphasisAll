@@ -1,0 +1,27 @@
+<p>addtocart works!</p>
+<div class="row" style="margin-left:20px;">
+    <div class="col-md-4" *ngFor="let item of cartItem">
+      <div><img src="{{item.image}}" style="height: 250px; width:250px;margin-top: 40px;"></div>
+      <div><b>Id : </b>{{item.id}}</div>
+      <div><b>Toppings : </b>{{item.toppings}}</div>
+      <div><b>Sauce : </b>{{item.sauce}}</div>
+      <div><b>Size : </b>{{item.size}}</div>
+      <div><b>Features : </b>{{item.Features}}</div>
+      <div><b>Price : </b>{{item.price}}</div>
+      <button routerLink="/order" [queryParams]="{a:item.id,b:item.toppings,c:item.sauce,d:item.size,e:item.Features,f:item.price,g:item.image}" class="btn btn-danger form-control mb-2 me-2" style="width: 200px;">Order Now</button>
+      <!-- <label><b>Enter Quantity:</b></label><input type="number" [(ngModel)] = "pizza.q" placeholder="Enter Quantity" class="form-control text-center mt-3 mb-3" style="width: 200px; margin:0 auto"> -->
+      <label >Enter Quantity:</label>
+      <input
+        class="form-control"
+        type="number"
+        min="1"
+        [(ngModel)]="item.q"
+        placeholder="Enter quantity"
+      >
+      <hr>
+    </div>
+  </div>
+  <button (click)="confirmbuy()" class="form-control ms-5 btn btn-danger" style="width: 200px; margin:0 auto">Confirm Buy</button>
+  <!-- {{orderDetails}} -->
+  <!-- id="quantity-{{ item.id }}"
+  for="quantity-{{ item.id }}" -->

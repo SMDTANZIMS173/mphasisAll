@@ -1,0 +1,8 @@
+.bg-image{
+    background-image: url('https://tse1.mm.bing.net/th/id/OIP.fDxrwXMNMRr837G066qp_gHaE7?w=248&h=180&c=7&r=0&o=5&pid=1.7');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    width: 100%;
+    background-attachment: fixed;
+}
