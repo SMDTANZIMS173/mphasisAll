@@ -1,0 +1,20 @@
+<!-- <p>buy works!</p>
+{{result}}<br>
+<button (click)="incre()">increment</button>
+<br>
+{{res}}
+<br>
+<p #h1 (mouseover)="hoverme()" (mouseout)="hoverout()">{{col}}</p> -->
+<div class="text-center">
+<h1>{{pname}}:</h1>
+<img src='{{image}}'><br>
+<label>Product id: </label>{{pid}}<br>
+<label>Product Name: </label>{{pname}}<br>
+<label>Product price: </label>{{price | currency:'INR'}}<br>
+<label>Product description: </label>{{description}}<br><br>
+<input type="number" [(ngModel)] = "q" placeholder="Enter Quantity" class="form-control text-center" style="width: 300px;margin: 0 auto;"><br>
+<button class="btn btn-primary">Confirm Buy</button><br><br>
+<div style="font: size 50px;">
+Total Price is {{q *price}}
+</div>
+</div>

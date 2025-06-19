@@ -1,0 +1,13 @@
+<p>assignparent works!</p>
+{{a}}
+<app-assignchild (myevent)="show($event)"></app-assignchild>
+<!-- <div (myevent)="show()"></div> -->
+<hr>
+<input type="text" #p1 placeholder="Enter Name">
+<input type="text" #p2 placeholder="Enter id">
+<input type="text" #p3 placeholder="Company name">
+
+<button (click)="showdet(p1.value, p2.value, p3.value)">Submit</button>
+<app-assignchild [ename]="ename" [eid]="eid" [ecompany]="ecompany"></app-assignchild>
+<!-- <button (myeven) = "showdet($event)">Submit</button> -->
+

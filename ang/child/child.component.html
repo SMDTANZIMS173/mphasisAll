@@ -1,0 +1,14 @@
+<p>child works!</p>
+<p>the content of child goes here</p>
+<p>message from prent goes here {{message}}</p>
+<p>am from parent{{s}}</p>
+<button (click) = "executefunc()">Click Me</button>
+<div>
+    <div>the content from parent is </div>
+    <ng-content></ng-content>
+</div>
+<button (click)="changecontent()">changeContent</button>
+<div>
+    <ng-content></ng-content>
+</div>
+<!-- <button (click)="changecolor1()">changeContent1</button> -->
